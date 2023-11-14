@@ -1,26 +1,30 @@
 package com.uce.edu;
 
-import java.time.LocalDateTime;
-
+import com.uce.edu.ioc.Estudiante;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.math.BigDecimal;
+
 @SpringBootApplication
 public class Pa2U1P5EvApplication implements CommandLineRunner {
 
+	@Autowired
+	private Estudiante estudiante;
 	public static void main(String[] args) {
 		SpringApplication.run(Pa2U1P5EvApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Hola Mundo");
-		System.out.println("Soy Emil Verkade");
-		LocalDateTime now = LocalDateTime.now();
-        System.out.println("Hora actual: " + now);
-        System.out.println("Cambio en la rama");
-        System.out.println("Taller 4");
+		this.estudiante.setNombre("Emil");
+		this.estudiante.setApellido("Verkade");
+		this.estudiante.setCedula("17");
+		this.estudiante.setSalario(new BigDecimal(150));
+		System.out.println(estudiante.toString());
+
 	}
 
 	
