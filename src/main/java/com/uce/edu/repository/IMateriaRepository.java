@@ -2,10 +2,13 @@ package com.uce.edu.repository;
 
 import com.uce.edu.repository.modelo.Materia;
 
+import java.util.List;
+
 public interface IMateriaRepository {
 
-    public Materia seleccionar(String codigo);
-    public void insertar (Materia materia);
-    public void actualizar (Materia materia);
-    public void borrar (String codigo);
+    Materia seleccionar(String codigo);
+    void insertar (Materia materia);
+    void actualizar (Materia materia);
+    void borrar (String codigo);
+    List<Materia> listar();
 }
