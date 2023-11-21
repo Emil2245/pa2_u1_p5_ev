@@ -15,38 +15,31 @@ import java.util.List;
 public class Pa2U1P5EvApplication implements CommandLineRunner {
 
 	@Autowired
-	private IMateriaService iMateriaService;
-	@Autowired
 	private Materia materia;
+	@Autowired
+	private Materia materia1;
+	@Autowired
+	private Materia materia2;
 	public static void main(String[] args) {
 		SpringApplication.run(Pa2U1P5EvApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		this.materia.setCodigo("P1");
 		this.materia.setNombre("Avanzada 2");
-		this.materia.setNumeroCreditos(17);
-		this.iMateriaService.registrar(materia);
+		System.out.println(this.materia);
+		System.out.println(this.materia1);
+		this.materia1.setNombre("Redes");
+		System.out.println(this.materia1);
+		System.out.println(this.materia);
 
-		this.iMateriaService.buscar("P1");
+		this.materia2.setNombre("Otra Materia");
+		System.out.println(this.materia2);
+		System.out.println(this.materia1);
+		System.out.println(this.materia);
 
-		Materia materia1= this.iMateriaService.buscar("P1");
-		System.out.println(materia1);
 
-		materia1.setNumeroCreditos(50);
 
-		this.iMateriaService.actualizar(materia1);
-		materia1=this.iMateriaService.buscar("P1");
-		System.out.println(materia1);
-
-		//this.iMateriaService.eliminar("P1");
-
-		Materia materia2=this.iMateriaService.buscar("P1");
-		System.out.println(materia2);
-
-		List<Materia> busqueda=this.iMateriaService.listar();
-		busqueda.forEach(System.out::println);
 	}
 
 	
