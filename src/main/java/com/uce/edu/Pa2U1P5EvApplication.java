@@ -1,15 +1,10 @@
 package com.uce.edu;
 
-import com.uce.edu.ioc.Estudiante;
 import com.uce.edu.repository.modelo.Materia;
-import com.uce.edu.service.IMateriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.math.BigDecimal;
-import java.util.List;
 
 @SpringBootApplication
 public class Pa2U1P5EvApplication implements CommandLineRunner {
@@ -23,7 +18,6 @@ public class Pa2U1P5EvApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(Pa2U1P5EvApplication.class, args);
 	}
-
 	@Override
 	public void run(String... args) throws Exception {
 		this.materia.setNombre("Avanzada 2");
@@ -38,9 +32,5 @@ public class Pa2U1P5EvApplication implements CommandLineRunner {
 		System.out.println(this.materia1);
 		System.out.println(this.materia);
 
-
-
 	}
-
-	
 }
