@@ -18,7 +18,13 @@ public class CuentaBancariaRepositoryImpl implements ICuentaBancariaRepository {
         System.out.println("Seleccionamos: " + numero);
         for (CuentaBancaria m:
                 bd) {
-            if (m.getNumero().equals(numero)) return m;
+            if (m.getNumero().equals(numero)) {
+                CuentaBancaria cta= new CuentaBancaria();
+                cta.setNumero(m.getNumero());
+                cta.setSaldo(m.getSaldo());
+                cta.setCedulaPropietario(m.getCedulaPropietario());
+                return cta;
+            }
         }
         return null;
     }

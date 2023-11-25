@@ -12,6 +12,16 @@ public class Transferencia {
     private CuentaBancaria cuentaOrigen;
     private CuentaBancaria cuentaDestino;
 
+    @Override
+    public String toString() {
+        return "Transferencia{" +
+                "num='" + num + '\'' +
+                ", fecha=" + fecha +
+                ", monto=" + monto +
+                ", cuentaOrigen=" + cuentaOrigen +
+                ", cuentaDestino=" + cuentaDestino +
+                '}';
+    }
 
     public String getNum() {
         return num;
