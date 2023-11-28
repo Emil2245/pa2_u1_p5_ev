@@ -63,9 +63,11 @@ public class Pa2U1P5EvApplication implements CommandLineRunner {
                 this.iCuentaBancariaService.buscar(ctaOrigen.getNumero()).toString() + "\n" +
                         this.iCuentaBancariaService.buscar(ctaDestino.getNumero()).toString()
         );
+        System.out.println("-----------------------------------");
 
         this.iCuentaBancariaService.depositar("10",new BigDecimal(250));
+        System.out.println("-----------------------------------");
         System.out.println(
-                this.iCuentaBancariaService.buscar(ctaOrigen.toString()));
+                this.iCuentaBancariaService.buscar(ctaOrigen.getNumero()));
     }
 }
