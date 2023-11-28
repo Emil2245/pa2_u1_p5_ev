@@ -1,7 +1,5 @@
 package com.uce.edu.transferencia.repository;
 
-import com.uce.edu.repository.modelo.Materia;
-import com.uce.edu.transferencia.repository.ITransferenciaRepository;
 import com.uce.edu.transferencia.repository.modelo.Transferencia;
 import org.springframework.stereotype.Repository;
 
@@ -42,5 +40,10 @@ public class TransferenciaRepositoryImpl implements ITransferenciaRepository {
         Transferencia b= this.seleccionar(numero);
         bd.remove(b);
         System.out.println("Se ha borrado: " + numero);
+    }
+
+    @Override
+    public List<Transferencia> listar() {
+        return bd;
     }
 }

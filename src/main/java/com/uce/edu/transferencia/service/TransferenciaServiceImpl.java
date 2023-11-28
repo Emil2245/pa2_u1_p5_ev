@@ -1,6 +1,7 @@
 package com.uce.edu.transferencia.service;
 
 import com.uce.edu.repository.IMateriaRepository;
+import com.uce.edu.repository.modelo.Materia;
 import com.uce.edu.transferencia.repository.ICuentaBancariaRepository;
 import com.uce.edu.transferencia.repository.ITransferenciaRepository;
 import com.uce.edu.transferencia.repository.modelo.CuentaBancaria;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalTime;
+import java.util.List;
 
 @Service
 public class TransferenciaServiceImpl implements ITransferenciaService {
@@ -38,6 +40,7 @@ public class TransferenciaServiceImpl implements ITransferenciaService {
         this.iTransferenciaRepository.eliminar(codigo);
 
     }
+
 
     @Override
     public void realizar(String numeroOrigen, String numeroDestino, BigDecimal monto) {
@@ -77,5 +80,10 @@ public class TransferenciaServiceImpl implements ITransferenciaService {
         } else {
             System.out.println("Saldo no disponible");
         }
+    }
+
+    @Override
+    public List<Transferencia> listar() {
+        return this.iTransferenciaRepository.listar();
     }
 }

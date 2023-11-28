@@ -36,4 +36,18 @@ public class CuentaBancariaServiceIpl implements ICuentaBancariaService{
 
     }
 
+    @Override
+    public void depositar(String numCta, BigDecimal deposito) {
+//        6. buscar cuenta destino
+        CuentaBancaria ctaDestino = this.iCuentaBancariaRepository.seleccionar(numCta);
+//        7. consultar el saldo
+        BigDecimal saldoDestino = ctaDestino.getSaldo();
+//        8. sumar el monto
+        BigDecimal nuevoSaldoDestino = saldoDestino.add(deposito.multiply(new BigDecimal(0.9)));
+//        9. actualizar la cuenta destino
+        ctaDestino.setSaldo(nuevoSaldoDestino);
+        this.iCuentaBancariaRepository.actualizar(ctaDestino);
+//
+    }
+
 }
