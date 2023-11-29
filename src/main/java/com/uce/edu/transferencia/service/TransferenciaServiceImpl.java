@@ -1,7 +1,5 @@
 package com.uce.edu.transferencia.service;
 
-import com.uce.edu.repository.IMateriaRepository;
-import com.uce.edu.repository.modelo.Materia;
 import com.uce.edu.transferencia.repository.ICuentaBancariaRepository;
 import com.uce.edu.transferencia.repository.ITransferenciaRepository;
 import com.uce.edu.transferencia.repository.modelo.CuentaBancaria;

@@ -1,6 +1,5 @@
 package com.uce.edu.transferencia.service;
 
-import com.uce.edu.repository.modelo.Materia;
 import com.uce.edu.transferencia.repository.modelo.Transferencia;
 
 import java.math.BigDecimal;

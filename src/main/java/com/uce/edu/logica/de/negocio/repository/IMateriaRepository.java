@@ -1,6 +1,6 @@
-package com.uce.edu.repository;
+package com.uce.edu.logica.de.negocio.repository;
 
-import com.uce.edu.repository.modelo.Materia;
+import com.uce.edu.logica.de.negocio.repository.modelo.Materia;
 
 import java.util.List;
 

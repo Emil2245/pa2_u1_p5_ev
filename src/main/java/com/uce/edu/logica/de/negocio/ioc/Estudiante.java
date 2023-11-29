@@ -1,4 +1,4 @@
-package com.uce.edu.ioc;
+package com.uce.edu.logica.de.negocio.ioc;
 
 import org.springframework.stereotype.Component;
 

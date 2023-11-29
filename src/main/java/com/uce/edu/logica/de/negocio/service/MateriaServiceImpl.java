@@ -1,7 +1,7 @@
-package com.uce.edu.service;
+package com.uce.edu.logica.de.negocio.service;
 
-import com.uce.edu.repository.IMateriaRepository;
-import com.uce.edu.repository.modelo.Materia;
+import com.uce.edu.logica.de.negocio.repository.IMateriaRepository;
+import com.uce.edu.logica.de.negocio.repository.modelo.Materia;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

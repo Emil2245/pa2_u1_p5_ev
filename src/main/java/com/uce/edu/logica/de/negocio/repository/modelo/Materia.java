@@ -1,6 +1,5 @@
-package com.uce.edu.repository.modelo;
+package com.uce.edu.logica.de.negocio.repository.modelo;
 
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

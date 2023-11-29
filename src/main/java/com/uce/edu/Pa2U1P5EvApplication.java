@@ -1,6 +1,5 @@
 package com.uce.edu;
 
-import com.uce.edu.repository.modelo.Materia;
 import com.uce.edu.transferencia.repository.modelo.CuentaBancaria;
 import com.uce.edu.transferencia.repository.modelo.Transferencia;
 import com.uce.edu.transferencia.service.ICuentaBancariaService;
@@ -9,16 +8,39 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.util.Assert;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 @SpringBootApplication
 public class Pa2U1P5EvApplication implements CommandLineRunner {
+//    Inyeccion por atributo
+    private final ICuentaBancariaService iCuentaBancariaService;
+    private final ITransferenciaService iTransferenciaService;
     @Autowired
-    private ITransferenciaService iTransferenciaService;
-    @Autowired
-    private ICuentaBancariaService iCuentaBancariaService;
+    public Pa2U1P5EvApplication(ITransferenciaService iTransferenciaService, ICuentaBancariaService iCuentaBancariaService) {
+        this.iTransferenciaService = iTransferenciaService;
+        this.iCuentaBancariaService = iCuentaBancariaService;
+    }
+
+//    Inyeccion por constructor
+//    private ITransferenciaService iTransferenciaService;
+//    @Autowired
+//    public Pa2U1P5EvApplication(ITransferenciaService iTransferenciaService){
+//        this.iTransferenciaService = iTransferenciaService;
+//    }
+
+    //inyeccion por metodo
+//    private ITransferenciaService iTransferenciaService;
+//    @Autowired
+//    public void setiTransferenciaService(ITransferenciaService iTransferenciaService) {
+//        this.iTransferenciaService = iTransferenciaService;
+//    }
+
+
+
+
 
     public static void main(String[] args) {
         SpringApplication.run(Pa2U1P5EvApplication.class, args);

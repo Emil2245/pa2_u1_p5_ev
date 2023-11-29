@@ -1,9 +1,6 @@
 package com.uce.edu.transferencia.repository;
 
-import com.uce.edu.repository.modelo.Materia;
-import com.uce.edu.transferencia.repository.ICuentaBancariaRepository;
 import com.uce.edu.transferencia.repository.modelo.CuentaBancaria;
-import com.uce.edu.transferencia.repository.modelo.Transferencia;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
