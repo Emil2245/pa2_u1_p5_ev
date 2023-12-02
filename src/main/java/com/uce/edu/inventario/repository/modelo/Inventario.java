@@ -2,42 +2,54 @@ package com.uce.edu.inventario.repository.modelo;
 
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+
 @Component
 public class Inventario {
-    private String nombre;
-    private Integer Stock;
-    private String codigoBarras;
+    private String codigo;
+    private LocalDateTime fechaIngreso;
+    private Bodega bodega;
+    private Producto producto;
 
     @Override
     public String toString() {
         return "Inventario{" +
-                "nombre='" + nombre + '\'' +
-                ", Stock=" + Stock +
-                ", codigoBarras='" + codigoBarras + '\'' +
+                "codigo='" + codigo + '\'' +
+                ", fechaIngreso=" + fechaIngreso +
+                ", bodega=" + bodega +
+                ", producto=" + producto +
                 '}';
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getCodigo() {
+        return codigo;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
-    public Integer getStock() {
-        return Stock;
+    public LocalDateTime getFechaIngreso() {
+        return fechaIngreso;
     }
 
-    public void setStock(Integer stock) {
-        Stock = stock;
+    public void setFechaIngreso(LocalDateTime fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
     }
 
-    public String getCodigoBarras() {
-        return codigoBarras;
+    public Bodega getBodega() {
+        return bodega;
     }
 
-    public void setCodigoBarras(String codigoBarras) {
-        this.codigoBarras = codigoBarras;
+    public void setBodega(Bodega bodega) {
+        this.bodega = bodega;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 }
