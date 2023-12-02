@@ -64,6 +64,7 @@ public class Pa2U1P5EvApplication implements CommandLineRunner {
         System.out.println(
                 this.iProductoService.buscar(p2.getCodigoBarras())
         );
+        System.out.println("----------------------");
 
     }
 }
